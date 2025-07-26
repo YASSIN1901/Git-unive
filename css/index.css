@@ -1,3 +1,8 @@
+ header {
+  padding-top: env(safe-area-inset-top); /* يضيف مساحة آمنة في الأعلى */
+  padding: calc(15px + env(safe-area-inset-top)) 15px 15px 15px;
+}
+
  body {
    background-repeat: no-repeat;
    background-size:contain;
