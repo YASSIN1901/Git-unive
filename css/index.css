@@ -1,47 +1,24 @@
-@media (max-width: 600px) {
-  .flexs-contener a {
-    font-size: 14px;
-    padding: 8px 10px;
-    margin: 5px 5px;
-  }
-
-  .content {
-    margin-top: 120px;
-    padding: 15px;
-  }
-
-  h1, h4, p {
-    font-size: 16px;
-  }
-
-  .articleup ul {
-    font-size: 14px;
-  }
-}
-
  body {
    background-repeat: no-repeat;
    background-size:contain;
  }
 
 
-.flexs-contener {
+ .flexs-contener {
     display: flex;
-    flex-wrap: wrap; /*للعمل على شاشات الجوال بسلاسه*/
+    flex-wrap: nowrap; /* لا يُسمح بالتفاف العناصر */
+    overflow-x: auto; /* تمكين التمرير الأفقي */
     background-color: dodgerblue;
-    justify-content: center;
-
-    /* لجعل الحاوية بالاعلى لاتقوم بالنزول */
+    justify-content: flex-start; /* المحاذاة لليسار */
     position: fixed;
     top: 0;
     left: 0;
-
     width: 100%;
-    padding: 10px;
+    padding: calc(15px + env(safe-area-inset-top)) 10px 15px 10px;
     z-index: 1000;
-
-    padding: calc(15px + env(safe-area-inset-top)) 10px 15px 10px; /* حشو آمن لأجهزة الجوال */
-    box-sizing: border-box; /* يمنع مشاكل الطول والعرض */
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch; /* تحسين السحب في iOS/أندرويد */
+    gap: 10px; /* مسافة بين الأزرار */
 }
 
 .flexs-contener a {
