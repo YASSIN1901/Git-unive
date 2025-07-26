@@ -1,9 +1,28 @@
+@media (max-width: 600px) {
+  .flexs-contener a {
+    font-size: 14px;
+    padding: 8px 10px;
+    margin: 5px 5px;
+  }
 
+  .content {
+    margin-top: 120px;
+    padding: 15px;
+  }
+
+  h1, h4, p {
+    font-size: 16px;
+  }
+
+  .articleup ul {
+    font-size: 14px;
+  }
+}
 
  body {
    background-repeat: no-repeat;
    background-size:contain;
-}
+ }
 
 
 .flexs-contener {
