@@ -6,7 +6,7 @@
 
  .flexs-contener {
     display: flex; 
-    flex-wrap:nowrap; /* لا يُسمح بالتفاف العناصر */
+    flex-wrap:wrap; /* لا يُسمح بالتفاف العناصر */
     overflow-x: auto; /* تمكين التمرير الأفقي */
     background-color: dodgerblue;
     justify-content: center; /* المحاذاة لليسار */
