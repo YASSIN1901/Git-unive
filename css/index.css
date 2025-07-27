@@ -5,11 +5,11 @@
 
 
  .flexs-contener {
-    /* display: flex; */
+    display: flex; 
     flex-wrap:nowrap; /* لا يُسمح بالتفاف العناصر */
     overflow-x: auto; /* تمكين التمرير الأفقي */
     background-color: dodgerblue;
-    justify-content: flex-start; /* المحاذاة لليسار */
+    justify-content: center; /* المحاذاة لليسار */
     position: fixed;
     top: 0;
     left: 0;
@@ -19,6 +19,7 @@
     box-sizing: border-box;
     -webkit-overflow-scrolling: touch; /* تحسين السحب في iOS/أندرويد */
     gap: 10px; /* مسافة بين الأزرار */
+    
 }
 
 .flexs-contener a {
