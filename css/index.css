@@ -4,7 +4,24 @@
  }
 
 
- 
+ .flexs-contener {
+    display: flex; 
+    flex-wrap:nowrap; /* لا يُسمح بالتفاف العناصر */
+    overflow-x: auto; /* تمكين التمرير الأفقي */
+    background-color: dodgerblue;
+    justify-content: center; /* المحاذاة لليسار */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: calc(15px + env(safe-area-inset-top)) 10px 15px 10px;
+    z-index: 1000;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch; /* تحسين السحب في iOS/أندرويد */
+    gap: 10px; /* مسافة بين الأزرار */
+    
+}
+
 .flexs-contener a {
     color: white;
     background-color: #333;
