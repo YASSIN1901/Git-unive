@@ -5,8 +5,8 @@
 
 
  .flexs-contener {
-    display: flex;
-    flex-wrap: nowrap; /* لا يُسمح بالتفاف العناصر */
+    /* display: flex; */
+    flex-wrap:nowrap; /* لا يُسمح بالتفاف العناصر */
     overflow-x: auto; /* تمكين التمرير الأفقي */
     background-color: dodgerblue;
     justify-content: flex-start; /* المحاذاة لليسار */
