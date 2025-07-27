@@ -12,7 +12,7 @@
     justify-content: center; /* المحاذاة لليسار */
     position: fixed;
     top: 0;
-    left: 3px;
+    left: 0;
     width: 100%;
     padding: calc(15px + env(safe-area-inset-top)) 10px 15px 10px;
     z-index: 1000;
@@ -26,7 +26,7 @@
     color: white;
     background-color: #333;
     padding: 10px 20px;
-    margin: 0 10px;
+    margin: 3px 10px;
     text-decoration: none; /*لحذف الخط الذي تحت الكلمة التي تدل على الرابط*/
     font-size: 18px;
     border-radius: 5px;
