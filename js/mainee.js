@@ -13,12 +13,6 @@ function open_Menu() {
 }
 
 
-
-
-
-
-
-
 var cart = document.querySelector('.cart');
 
 function open_close_cart() {
@@ -58,6 +52,10 @@ fetch('products.json')
 
     })
 
+
+
+//هذه دالة وظيفتها إضافة منتج إلى سلة المشتريات تبقى محفوظة حتى لو أغلق المستخدم الصفحة//
+
 function addToCart(product) {
 
 
@@ -78,8 +76,14 @@ function updateCart() {
 
     const cart = JSON.parse(localStorage.getItem('cart')) || []
 
-      var total_Price = 0
-    var total_count = 0 
+    const checkout_items = document.getElementById("checkout_items")
+
+    if(  checkout_items){
+        checkout_items.innerHTML=``
+       } 
+
+    var total_Price = 0
+    var total_count = 0
 
 
     cartItemsContainer.innerHTML = "";
@@ -114,26 +118,75 @@ function updateCart() {
 
         `
 
+
+        if (checkout_items){
+            checkout_items.innerHTML += `  
+             <div class="item_cart">
+
+            <div class="image_name">
+                <img src="${item.img}" alt="">
+
+                <div class="content">
+                    <h4>${item.name}</h4>
+                    <p class="price_cart">$${total_Price_item}</p>
+                    <div class="quantity_control">
+                        <button class="decrease_quantity" data-index=${index} >-</button>
+                        <span class="quantity">${item.quantity}</span>
+                        <button class="Increase_quantity" data-index=${index} >+</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <button class="delete_item"  data-inex="${index}" ><i class="fa-solid fa-trash-can"></i></button>
+            </div>
+
+
+
+                                                                                                                  
+            `
+
+
+
+
+        }
+
     })
 
 
-       const price_cart_total = document.querySelector('.price_cart_toral')
-    
+    const price_cart_total = document.querySelector('.price_cart_toral')
+
     const count_item_cart = document.querySelector('.Count_item_cart')
 
     const count_item_header = document.querySelector('.count_item_header')
 
-    
-      price_cart_total.innerHTML = `$ ${total_Price}`
+
+    price_cart_total.innerHTML = `$ ${total_Price}`
 
     count_item_cart.innerHTML = total_count
 
     count_item_header.innerHTML = total_count
+  
 
 
+    if(checkout_items){
+        const subtotal_checkout = document.querySelector(".subtotal_checkout")
+        const total_checkout= document.querySelector(".total_checkout")
+      
+      
+        subtotal_checkout .innerHTML= `$ ${total_Price + 20}`
+        total_checkout .innerHTML= `$ ${total_Price}`
+      
 
+    }
+    
+    
+    
+    
     const increaseButtons = document.querySelectorAll(".Increase_quantity")
     const decreaseButtons = document.querySelectorAll(".decrease_quantity")
+
+
 
 
 
@@ -213,3 +266,5 @@ function updateButoonsState(productId) {
 
 
 updateCart()
+
+

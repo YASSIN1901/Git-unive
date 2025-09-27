@@ -19,6 +19,13 @@ fetch('products.json')
 
         const swiper_mobiles = document.getElementById("swiper_mobiles");
 
+      
+
+        
+       
+
+     
+
         data.forEach(product => {
             if (product.old_price) {
 
@@ -204,6 +211,17 @@ fetch('products.json')
 
             }
         })
+
+
+     
+
+
+    
+
+
+    
+
+
 
 
 
